@@ -1,0 +1,12 @@
+ul li {
+  list-style: none;
+
+}
+
+.mat-dialog-action{
+  height: 400px;
+  width: 600px;
+  border-radius: 10px;
+  background: lightcyan;
+  color: #039be5;
+}

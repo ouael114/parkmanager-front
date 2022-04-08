@@ -1,0 +1,44 @@
+<h1 style="text-align:center">Parking Lot Table</h1>
+
+<mat-form-field>
+  <mat-label>Search</mat-label>
+  <input matInput placeholder="Search" (keyup)="applyFilter($event)">
+</mat-form-field>
+
+<div mat-dialog-actions align="end" (click)="onCreate()">
+  <button mat-raised-button color="primary">Add Parking</button>
+</div>
+
+<div>
+  <table id="parkings" mat-table [dataSource]="dataSource3" matSort>
+
+    <ng-container matColumnDef="n_place">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Numero Place</th>
+      <td mat-cell *matCellDef="let row">{{ row.n_place}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="etage">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Numero Etage</th>
+      <td mat-cell *matCellDef="let row">{{ row.etage}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="disponibilite">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Disponibilite</th>
+      <td mat-cell *matCellDef="let row">{{ row.disponibilite}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="temp_occupation">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Temp d'occupation</th>
+      <td mat-cell *matCellDef="let row">{{ row.temp_occupation}}</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="columns"></tr>
+    <tr mat-row *matRowDef="let row; columns: columns"></tr>
+
+  </table>
+  <mat-paginator [length]="parkings.length"
+                 [pageSize]="5"
+                 [pageSizeOptions]="[1, 5, 10, 25, 100]"
+                 aria-label="Select page">
+  </mat-paginator>
+</div>

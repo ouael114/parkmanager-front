@@ -1,0 +1,34 @@
+table {
+  width: 100%;
+}
+
+h1{
+  color: royalblue;
+}
+.mat-form-field {
+  width: 100%;
+}
+
+.mat-dialog-actions
+
+[align='end'] {
+  justify-content: flex-end;
+  height: 20px;
+
+
+}
+
+#dashboard tr:nth-child(even){background-color: #f2f2f2;}
+
+#dashboard tr:hover {background-color: #ddd;}
+
+#dashboard th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: royalblue;
+  color: white;
+}
+
+
+

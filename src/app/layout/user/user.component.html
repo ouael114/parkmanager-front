@@ -1,0 +1,10 @@
+<app-header (toggleSideBarForMe)="sideBarToggler($event)"></app-header>
+<mat-drawer-container>
+  <mat-drawer mode="side" [opened]="sideBarOpen">
+    <app-sidebar-user></app-sidebar-user>
+  </mat-drawer>
+  <mat-drawer-content>
+    <app-dashboard-user></app-dashboard-user>
+  </mat-drawer-content>
+</mat-drawer-container>
+<app-footer></app-footer>

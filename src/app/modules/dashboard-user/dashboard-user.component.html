@@ -1,0 +1,41 @@
+<h1 style="text-align:center" color="royalblue">Place Parking</h1>
+
+<mat-form-field>
+  <mat-label>Search</mat-label>
+  <input matInput placeholder="Num Etage" (keyup)="applyFilter($event)">
+</mat-form-field>
+
+<div mat-dialog-actions align="end" (click)="onCreate()">
+  <button mat-raised-button color="primary">Recherche Voiture</button>
+</div>
+
+<div>
+  <table id="dashbordu" mat-table [dataSource]="dataSource4" matSort>
+    <ng-container matColumnDef="n_place">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Place Parking</th>
+      <td mat-cell *matCellDef="let row">{{ row.n_place}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="etage">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Etage</th>
+      <td mat-cell *matCellDef="let row">{{ row.etage}}</td>
+    </ng-container>
+    <ng-container matColumnDef="action">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Action</th>
+      <td mat-cell *matCellDef="let row">
+        <button mat-flat-button color="primary">Assigner</button>
+        <button mat-flat-button color="warn">Desassigner</button>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="columns"></tr>
+    <tr mat-row *matRowDef="let row; columns: columns"></tr>
+
+
+  </table>
+  <mat-paginator [length]="dashboardu.length"
+                 [pageSize]="5"
+                 [pageSizeOptions]="[1, 5, 10, 25, 100]"
+                 aria-label="Select page">
+  </mat-paginator>
+</div>

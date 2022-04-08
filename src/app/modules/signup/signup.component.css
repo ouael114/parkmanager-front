@@ -1,0 +1,40 @@
+
+h1{
+  font-size: 2.5em;
+  color: #f2f2f2;
+}
+
+.form-group{
+  margin:10px 10px 10px 10px;
+}
+.card{
+  border: none;
+  width: 300px;
+  padding: 40px;
+  position: absolute;
+  top: -10%;
+  left: 50%;
+  transform: translate(-50%,50%);
+  background: hsla(205, 46%, 30%, 1);
+  background: linear-gradient(90deg, hsla(205, 46%, 30%, 1), hsla(260, 29%, 36%, 1) 100%);
+}
+.card h1,
+h6{
+  color: white;
+}
+label {
+  color: white;
+}
+div {
+  line-height: 25px;
+}
+.form-control{
+  margin:10px 10px 10px 10px;
+}
+
+mat-form-field rolee{
+  type:hidden;
+}
+#a{
+
+}
